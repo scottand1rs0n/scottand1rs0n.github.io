@@ -77,37 +77,34 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
 <body>
 
-<h2 class="w3-left"></h2>
+<h2 class="w3-center">Automatic Slideshow</h2>
 
-<div class="w3-content w3-display-container">
+<div class="w3-content w3-section" style="max-width:500px">
   <img class="mySlides" src="https://www.skatedeluxe.com/blog/wp-content/uploads/2016/08/skateboard-trick-tipp-ollie.jpg" style="width:100%">
   <img class="mySlides" src="http://www.woodwardcamp.com/images/stories//pa/galleries/2013Digital/adelmo_sequence_wk9_sk8_2013_ika.jpg" style="width:100%">
-  <img class="mySlides" src="https://image.redbull.com/rbcom/010/2015-10-23/1331755548638_2/0010/1/1600/1067/1/skate-tricks.jpg" style="width:100%">
   <img class="mySlides" src="http://www.capislam.com/i/2017/05/skateboard-tricks-wallpapers-wide-1043x695.jpg" style="width:100%">
-
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <img class="mySlides" src="https://image.redbull.com/rbcom/010/2015-10-23/1331755548638_2/0010/1/1600/1067/1/skate-tricks.jpg" style="width:100%">
 </div>
 
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+var myIndex = 0;
+carousel();
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); 
 }
 </script>
 
@@ -129,10 +126,5 @@ function showDivs(n) {
       <p>Lorem ipsum...</p>
     </div>
    
-
-
-
-
-
 </body>
 </html>
