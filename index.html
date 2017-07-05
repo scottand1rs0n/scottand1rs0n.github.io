@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+</body>
+</html>       
+
+
+
 <html lang="en">
 <head>
   <title>Everything Skateboarding</title>
@@ -8,30 +14,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  
     .row.content {height: 600px}
     
-    /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
       background-color: #f2f9f9;
       height: 100%;
     }
     
-    /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
-      color: white;
+      background-color: #239;
+      color: black;
       padding: 15px;
     }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
+ 
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -40,6 +42,10 @@
       .row.content {height:auto;} 
     }
   </style>
+
+
+
+
 </head>
 <body>
 
@@ -67,34 +73,66 @@
   </div>
 </nav>
   
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 class="w3-left"></h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://www.skatedeluxe.com/blog/wp-content/uploads/2016/08/skateboard-trick-tipp-ollie.jpg" style="width:100%">
+  <img class="mySlides" src="http://www.woodwardcamp.com/images/stories//pa/galleries/2013Digital/adelmo_sequence_wk9_sk8_2013_ika.jpg" style="width:100%">
+  <img class="mySlides" src="https://image.redbull.com/rbcom/010/2015-10-23/1331755548638_2/0010/1/1600/1067/1/skate-tricks.jpg" style="width:100%">
+  <img class="mySlides" src="http://www.capislam.com/i/2017/05/skateboard-tricks-wallpapers-wide-1043x695.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
+
+
+
 <div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+ 
+    <div class="col-sm-1 sidenav">
+      
     </div>
-    <div class="col-sm-8 text-left"> 
+    <div class="col-sm-10 text-left"> 
       <h1>Welcome</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
     </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
-    </div>
-  </div>
-</div>
+   
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+
+
+
 
 </body>
 </html>
